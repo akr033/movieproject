@@ -1,0 +1,12 @@
+<!-- templates/movieapp/edit_movie.html -->
+
+{% extends "base.html" %}
+{% block body %}
+    <h2>Edit Movie</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+{% endblock body %}
